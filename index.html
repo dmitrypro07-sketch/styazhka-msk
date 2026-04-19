@@ -190,20 +190,8 @@
   .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
   .portfolio-card { border-radius: var(--r2); overflow: hidden; aspect-ratio: 4/3; position: relative; cursor: pointer; transition: transform .3s, box-shadow .3s; }
   .portfolio-card:hover { transform: scale(1.02); box-shadow: 0 20px 60px rgba(0,0,0,.5); }
-  .portfolio-card:nth-child(1){background:linear-gradient(135deg,#0f0f0f,#1a1510,#2a200a)}
-  .portfolio-card:nth-child(2){background:linear-gradient(135deg,#1a1710,#2a220e,#c9a84c40)}
-  .portfolio-card:nth-child(3){background:linear-gradient(135deg,#0f0d0a,#1f1a10,#302610)}
-  .portfolio-card:nth-child(4){background:linear-gradient(135deg,#141210,#201c12,#2e2615)}
-  .portfolio-card:nth-child(5){background:linear-gradient(135deg,#0f0c08,#1f1a0e,#c9a84c50)}
-  .portfolio-card:nth-child(6){background:linear-gradient(135deg,#0d0b08,#1a1610,#c9a84c30)}
-  .portfolio-inner-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 20px 20px; }
-  .portfolio-dot { position: absolute; border-radius: 50%; filter: blur(40px); }
-  .portfolio-card:nth-child(1) .portfolio-dot{width:100px;height:100px;background:rgba(201,168,76,.35);top:20%;right:20%}
-  .portfolio-card:nth-child(2) .portfolio-dot{width:120px;height:120px;background:rgba(232,201,106,.3);top:10%;left:30%}
-  .portfolio-card:nth-child(3) .portfolio-dot{width:80px;height:80px;background:rgba(201,168,76,.4);bottom:30%;right:10%}
-  .portfolio-card:nth-child(4) .portfolio-dot{width:110px;height:110px;background:rgba(201,168,76,.28);top:15%;left:15%}
-  .portfolio-card:nth-child(5) .portfolio-dot{width:90px;height:90px;background:rgba(232,201,106,.35);top:30%;right:30%}
-  .portfolio-card:nth-child(6) .portfolio-dot{width:130px;height:130px;background:rgba(201,168,76,.22);top:5%;left:40%}
+  .portfolio-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .portfolio-card:hover img { transform: scale(1.06); }
   .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.75) 0%, transparent 60%); padding: 1.5rem; display: flex; flex-direction: column; justify-content: flex-end; }
   .portfolio-tag { font-size: .7rem; font-family: var(--font-mono); color: var(--accent2); margin-bottom: .4rem; letter-spacing: .08em; }
   .portfolio-title { font-weight: 600; font-size: .95rem; }
@@ -584,12 +572,12 @@
   <h2 class="section-title reveal">ПОРТФОЛИО</h2>
   <p class="section-sub reveal reveal-delay-1">Реализованные объекты в Москве и Московской области</p>
   <div class="portfolio-grid">
-    <div class="portfolio-card reveal reveal-delay-1"><div class="portfolio-inner-grid"></div><div class="portfolio-dot"></div><div class="portfolio-overlay"><div class="portfolio-tag">КВАРТИРА · 2024</div><div class="portfolio-title">ЖК «Ясенево», новостройка</div><div class="portfolio-area">68 м² · толщина 8 см · 1 день</div></div></div>
-    <div class="portfolio-card reveal reveal-delay-2"><div class="portfolio-inner-grid"></div><div class="portfolio-dot"></div><div class="portfolio-overlay"><div class="portfolio-tag">ОФИС · 2024</div><div class="portfolio-title">Бизнес-центр, Подольск</div><div class="portfolio-area">340 м² · толщина 7 см · 2 дня</div></div></div>
-    <div class="portfolio-card reveal reveal-delay-3"><div class="portfolio-inner-grid"></div><div class="portfolio-dot"></div><div class="portfolio-overlay"><div class="portfolio-tag">ЧАСТНЫЙ ДОМ · 2024</div><div class="portfolio-title">Коттедж, Красногорск</div><div class="portfolio-area">180 м² · толщина 10 см · 1 день</div></div></div>
-    <div class="portfolio-card reveal reveal-delay-1"><div class="portfolio-inner-grid"></div><div class="portfolio-dot"></div><div class="portfolio-overlay"><div class="portfolio-tag">НОВОСТРОЙКА · 2023</div><div class="portfolio-title">ЖК «Митино Парк»</div><div class="portfolio-area">45 м² · толщина 10 см · 1 день</div></div></div>
-    <div class="portfolio-card reveal reveal-delay-2"><div class="portfolio-inner-grid"></div><div class="portfolio-dot"></div><div class="portfolio-overlay"><div class="portfolio-tag">РЕСТОРАН · 2023</div><div class="portfolio-title">Ресторан, Химки</div><div class="portfolio-area">220 м² · толщина 7 см · 2 дня</div></div></div>
-    <div class="portfolio-card reveal reveal-delay-3"><div class="portfolio-inner-grid"></div><div class="portfolio-dot"></div><div class="portfolio-overlay"><div class="portfolio-tag">СКЛАД · 2023</div><div class="portfolio-title">Склад, Домодедово</div><div class="portfolio-area">850 м² · толщина 8 см · 5 дней</div></div></div>
+    <div class="portfolio-card reveal reveal-delay-1"><img src="foto_rabot/8.png" alt="Стяжка пола квартира"><div class="portfolio-overlay"><div class="portfolio-tag">КВАРТИРА · 2025</div><div class="portfolio-title">Готовая стяжка, жилая комната</div><div class="portfolio-area">42 м² · толщина 8 см · 1 день</div></div></div>
+    <div class="portfolio-card reveal reveal-delay-2"><img src="foto_rabot/5.png" alt="Затирка стяжки машиной"><div class="portfolio-overlay"><div class="portfolio-tag">ПРОЦЕСС · 2025</div><div class="portfolio-title">Финишная затирка машиной</div><div class="portfolio-area">65 м² · толщина 7 см · 1 день</div></div></div>
+    <div class="portfolio-card reveal reveal-delay-3"><img src="foto_rabot/9.png" alt="Стяжка пола коридор"><div class="portfolio-overlay"><div class="portfolio-tag">НОВОСТРОЙКА · 2025</div><div class="portfolio-title">Стяжка в коридоре и комнатах</div><div class="portfolio-area">55 м² · толщина 8 см · 1 день</div></div></div>
+    <div class="portfolio-card reveal reveal-delay-1"><img src="foto_rabot/3.png" alt="Укладка тёплого пола"><div class="portfolio-overlay"><div class="portfolio-tag">ТЁПЛЫЙ ПОЛ · 2024</div><div class="portfolio-title">Монтаж тёплого пола, коттедж</div><div class="portfolio-area">90 м² · толщина 10 см · 1 день</div></div></div>
+    <div class="portfolio-card reveal reveal-delay-2"><img src="foto_rabot/7.png" alt="Готовая стяжка комната"><div class="portfolio-overlay"><div class="portfolio-tag">КВАРТИРА · 2024</div><div class="portfolio-title">Готовая стяжка под отделку</div><div class="portfolio-area">38 м² · толщина 8 см · 1 день</div></div></div>
+    <div class="portfolio-card reveal reveal-delay-3"><img src="foto_rabot/6.png" alt="Стяжка с оборудованием"><div class="portfolio-overlay"><div class="portfolio-tag">ПРОЦЕСС · 2024</div><div class="portfolio-title">Выравнивание и затирка</div><div class="portfolio-area">120 м² · толщина 7 см · 1 день</div></div></div>
   </div>
 </section>
 
