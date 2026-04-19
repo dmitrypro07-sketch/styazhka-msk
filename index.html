@@ -110,12 +110,12 @@
 
   /* TRUST BAR */
   #trust { background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .trust-inner { padding: 2.5rem 6vw; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
-  .trust-item { display: flex; align-items: center; gap: .75rem; }
-  .trust-icon { font-size: 1.8rem; }
-  .trust-label { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+  .trust-inner { padding: 1.75rem 6vw; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: nowrap; }
+  .trust-item { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+  .trust-icon { font-size: 1.5rem; }
+  .trust-label { font-size: .8rem; color: var(--muted); line-height: 1.4; white-space: nowrap; }
   .trust-label strong { color: var(--white); display: block; }
-  .trust-divider { width: 1px; height: 40px; background: var(--border); }
+  .trust-divider { width: 1px; height: 32px; background: var(--border); flex-shrink: 0; }
 
   /* BENEFITS */
   #benefits { background: var(--bg2); }
@@ -315,10 +315,10 @@
     .form-control { font-size: 16px; }
     footer { flex-direction: column; text-align: center; gap: .75rem; }
     .order-toast { left: 1rem; right: 1rem; bottom: 5.5rem; max-width: none; }
-    .trust-inner { gap: 1.25rem; padding: 1.5rem 4vw; }
+    .trust-inner { gap: 1rem; padding: 1.25rem 4vw; flex-wrap: wrap; justify-content: center; }
     .trust-item { gap: .5rem; }
-    .trust-icon { font-size: 1.4rem; }
-    .trust-label { font-size: .78rem; }
+    .trust-icon { font-size: 1.3rem; }
+    .trust-label { font-size: .75rem; white-space: normal; }
     .benefits-grid { grid-template-columns: 1fr; }
     .steps-grid { grid-template-columns: 1fr; }
     .about-photo { aspect-ratio: 1/1; max-height: 320px; }
