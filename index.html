@@ -71,7 +71,7 @@
   .fill-text-gold.animate { animation: fillUp 1.8s cubic-bezier(0.22,1,0.36,1) forwards; }
   @keyframes fillUp { 0%{clip-path:inset(100% 0% 0% 0%)} 100%{clip-path:inset(0% 0% 0% 0%)} }
 
-  .hero h1 { font-family: var(--font-head); font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.05; letter-spacing: .02em; margin-bottom: 1.5rem; text-transform: uppercase; white-space: nowrap; }
+  .hero h1 { font-family: var(--font-head); font-size: clamp(2.4rem, 5.5vw, 5rem); line-height: 1.05; letter-spacing: .02em; margin-bottom: 1.5rem; text-transform: uppercase; }
   .hero h1 .accent { color: var(--accent); }
   .hero h1 .sub { color: var(--muted); font-size: 68%; }
   .hero-sub { color: var(--muted); font-size: 1.05rem; max-width: 520px; margin-bottom: 1.5rem; line-height: 1.7; }
@@ -282,7 +282,9 @@
   /* RESPONSIVE */
   @media (max-width: 900px) {
     .nav-links { display: none; }
-    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: var(--bg2); padding: 1rem; border-bottom: 1px solid var(--border); gap: 1rem; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: var(--bg2); padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); gap: .25rem; z-index: 99; }
+    .nav-links.open li a { display: block; padding: .7rem 0; font-size: 1rem; border-bottom: 1px solid var(--border); }
+    .nav-links.open li:last-child a { border-bottom: none; }
     .burger { display: flex; }
     .nav-phone { display: none; }
     .nav-phone-mobile { display: flex; align-items: center; }
@@ -291,28 +293,54 @@
     .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-grid::before { display: none; }
     .trust-divider { display: none; }
+    .about-wrap { grid-template-columns: 1fr; gap: 2rem; }
+    .about-photo { aspect-ratio: 4/3; max-height: 380px; }
   }
   @media (max-width: 768px) {
     .sticky-cta { display: flex; }
     body { padding-bottom: 80px; }
-    .chat-bubble { bottom: 5.5rem; }
-    .chat-panel { bottom: 9rem; }
+    .chat-bubble { bottom: 5.5rem; right: 1rem; }
+    .chat-panel { bottom: 9rem; right: 1rem; left: 1rem; width: auto; }
+    .social-dock { bottom: 8.5rem; right: 1rem; }
+    .hero-overlay { background: linear-gradient(180deg, rgba(10,8,5,.85) 0%, rgba(10,8,5,.75) 60%, rgba(10,8,5,.7) 100%); }
   }
   @media (max-width: 600px) {
     section { padding: 60px 4vw; }
     nav { padding: 0 4vw; }
     .portfolio-grid { grid-template-columns: 1fr; }
     .reviews-grid { grid-template-columns: 1fr; }
-    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; }
+    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
+    .hero-stat-num { font-size: 2rem; }
     .radio-btn { padding: .75rem .5rem; min-height: 44px; }
     .form-control { font-size: 16px; }
-    footer { flex-direction: column; text-align: center; }
-    .order-toast { left: 1rem; right: 1rem; max-width: none; }
+    footer { flex-direction: column; text-align: center; gap: .75rem; }
+    .order-toast { left: 1rem; right: 1rem; bottom: 5.5rem; max-width: none; }
+    .trust-inner { gap: 1.25rem; padding: 1.5rem 4vw; }
+    .trust-item { gap: .5rem; }
+    .trust-icon { font-size: 1.4rem; }
+    .trust-label { font-size: .78rem; }
+    .benefits-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .about-photo { aspect-ratio: 1/1; max-height: 320px; }
+    .about-team { grid-template-columns: 1fr 1fr; }
+    .hero-tag-row { display: none; }
+    .hero-sub { font-size: .95rem; }
+    .section-title { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+    .calc-form { padding: 1.5rem; }
+    .calc-result { padding: 1.5rem; }
+    .contact-form { padding: 1.5rem; }
   }
   @media (max-width: 480px) {
-    .hero h1 { font-size: clamp(2rem, 8vw, 3rem); white-space: normal; line-height: 1.1; }
+    .hero { padding: 100px 4vw 60px; }
+    .hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); white-space: normal; line-height: 1.1; }
+    .hero h1 .sub { font-size: 60%; }
     .area-presets { gap: .35rem; }
     .preset-btn { font-size: .68rem; padding: .5rem .3rem; }
+    .about-team { grid-template-columns: 1fr; }
+    .social-btn { width: 38px; height: 38px; }
+    .social-btn svg { width: 18px; height: 18px; }
+    .social-dock { gap: .4rem; }
+    .chat-bubble { width: 52px; height: 52px; }
   }
 
   /* SOCIAL DOCK */
