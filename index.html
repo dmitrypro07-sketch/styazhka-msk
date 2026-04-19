@@ -197,6 +197,30 @@
   .portfolio-title { font-weight: 600; font-size: .95rem; }
   .portfolio-area { font-size: .8rem; color: var(--muted); }
 
+  /* ABOUT MASTER */
+  .about-wrap { display: grid; grid-template-columns: 400px 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .about-photo-wrap { position: relative; }
+  .about-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 16px; display: block; }
+  .about-photo-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: rgba(15,15,15,.85); backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; }
+  .about-photo-badge .name { font-family: var(--font-head); font-size: 1.3rem; letter-spacing: .06em; color: var(--white); }
+  .about-photo-badge .role { font-size: .8rem; color: var(--accent2); margin-top: .2rem; }
+  .about-content { display: flex; flex-direction: column; gap: 1.5rem; }
+  .about-lead { font-size: 1.15rem; line-height: 1.75; color: var(--white); }
+  .about-lead strong { color: var(--accent2); }
+  .about-case { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; }
+  .about-case-tag { font-size: .72rem; font-family: var(--font-mono); color: var(--accent); letter-spacing: .1em; margin-bottom: .75rem; }
+  .about-case-text { font-size: .95rem; color: var(--muted); line-height: 1.75; }
+  .about-case-text span { color: var(--white); font-weight: 500; }
+  .about-team { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+  .about-team-item { background: rgba(255,255,255,.03); border: 1px solid var(--border); border-radius: 10px; padding: .75rem 1rem; font-size: .82rem; color: var(--muted); }
+  .about-team-item strong { display: block; color: var(--white); font-size: .88rem; margin-bottom: .15rem; }
+  .about-consult { display: flex; align-items: center; gap: 1rem; background: linear-gradient(135deg, rgba(201,168,76,.1), rgba(201,168,76,.05)); border: 1px solid rgba(201,168,76,.25); border-radius: 14px; padding: 1.25rem 1.5rem; }
+  .about-consult-icon { font-size: 2rem; flex-shrink: 0; }
+  .about-consult-text strong { display: block; font-size: 1rem; color: var(--white); margin-bottom: .2rem; }
+  .about-consult-text span { font-size: .85rem; color: var(--muted); }
+  @media(max-width:900px) { .about-wrap { grid-template-columns: 1fr; gap: 2rem; } .about-photo { aspect-ratio: 1/1; } }
+  @media(max-width:480px) { .about-team { grid-template-columns: 1fr; } }
+
   /* REVIEWS */
   .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
   .review-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--r2); padding: 2rem; transition: all .3s; }
@@ -357,6 +381,7 @@
     <li><a href="#benefits">Преимущества</a></li>
     <li><a href="#how">Как работаем</a></li>
     <li><a href="#calculator">Калькулятор</a></li>
+    <li><a href="#about">О мастере</a></li>
     <li><a href="#reviews">Отзывы</a></li>
     <li><a href="#contacts">Контакты</a></li>
   </ul>
@@ -582,6 +607,47 @@
 </section>
 
 <!-- REVIEWS -->
+<section id="about" style="background:var(--bg2)">
+  <div class="section-tag">о мастере</div>
+  <h2 class="section-title reveal">ПОЗНАКОМЬТЕСЬ<br>С РАДОМИРОМ</h2>
+  <p class="section-sub reveal reveal-delay-1">Лично отвечаю за каждый объект. Выезжаю на замер сам.</p>
+  <div class="about-wrap reveal reveal-delay-2">
+    <div class="about-photo-wrap">
+      <img src="radomir.jpg" alt="Радомир Иванов — мастер по стяжке" class="about-photo">
+      <div class="about-photo-badge">
+        <div class="name">РАДОМИР ИВАНОВ</div>
+        <div class="role">Мастер · Бригада №10 · с 2015 года</div>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="about-consult">
+        <div class="about-consult-icon">🤝</div>
+        <div class="about-consult-text">
+          <strong>Консультация и расчёт — бесплатно</strong>
+          <span>Без обязательств. Считаю цену честно и сразу называю её.</span>
+        </div>
+      </div>
+      <p class="about-lead">
+        Работаю без посредников — вы общаетесь напрямую со мной. Своя бригада из 5 человек, профессиональное оборудование, <strong>гарантия 5 лет</strong> по договору.
+      </p>
+      <div class="about-case">
+        <div class="about-case-tag">ПОСЛЕДНИЙ ОБЪЕКТ</div>
+        <div class="about-case-text">
+          На прошлой неделе выполнили стяжку в новостройке в <span>Подольске</span>.<br>
+          Площадь <span>45 м²</span>, толщина <span>10 см</span>, с маяками и лазерным уровнем.<br>
+          Уложились за <span>1 день</span>. Помещение сдали чистым.
+        </div>
+      </div>
+      <div class="about-team">
+        <div class="about-team-item"><strong>Состав бригады</strong>Мастер + 4 специалиста</div>
+        <div class="about-team-item"><strong>Затирочная машина</strong>Fast AST RX-110</div>
+        <div class="about-team-item"><strong>Точность уровня</strong>Лазерный ± 1 мм</div>
+        <div class="about-team-item"><strong>Гарантия</strong>5 лет по договору</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="reviews" style="background:var(--bg2)">
   <div class="section-tag">отзывы</div>
   <h2 class="section-title reveal">ЧТО ГОВОРЯТ<br>ПОСЛЕ СДАЧИ</h2>
